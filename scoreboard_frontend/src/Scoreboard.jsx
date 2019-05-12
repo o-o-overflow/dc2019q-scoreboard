@@ -49,7 +49,7 @@ function Scoreboard(props) {
 
 	return (
 		<div>
-		  <a href="https://docs.google.com/forms/d/1r9zqzhbquzrchTp_KpPBESV91fTorFCDGMTQPGWGM_8/edit" className="feedback-link">The OOO requests your FEEDBACK on the game, please fill out this form</a>
+		  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNZQFep3eFFIAMm2Riz3H8nwqE-gOeEtbKSwxsOUiWuSlSVg/viewform" className="feedback-link">The OOO requests your FEEDBACK on the game, please fill out this form</a>
 		  <div>{youLink}</div>
 		  <table className="scoreboard">
 			<thead>
