@@ -41,6 +41,7 @@ class GameMatrix extends React.Component {
 		this.challenges.sort();
 
 		return (
+			<div><a href="https://docs.google.com/forms/d/1r9zqzhbquzrchTp_KpPBESV91fTorFCDGMTQPGWGM_8/edit" className="feedback-link">The OOO requests your FEEDBACK on the game, please fill out this form</a>
 			<table className='lcars-u-7 solves'>
 			  <thead>
 				<tr>
@@ -52,6 +53,7 @@ class GameMatrix extends React.Component {
 				{this.body()}
 			  </tbody>
 			</table>
+			</div>
 		);
 	}
 }

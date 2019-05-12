@@ -74,7 +74,8 @@ class ChallengeMenu extends React.Component {
       this.sectionInfo[sectionTitle].column === 'right').map(this.buildSections);
 
     return (
-      <div>
+		<div>
+		  <a href="https://docs.google.com/forms/d/1r9zqzhbquzrchTp_KpPBESV91fTorFCDGMTQPGWGM_8/edit" className="feedback-link">The OOO requests your FEEDBACK on the game, please fill out this form</a>
           <h1 className="lcars-row fill">Cadet Training Program</h1>
           <div className="lcars-row fill">
 			<div className="lcars-column fill">

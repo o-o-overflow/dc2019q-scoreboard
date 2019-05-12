@@ -36,6 +36,11 @@ a:visited {
 	color: white;
 }
 
+.feedback-link, a.feedback-link:visited {
+	text-decoration: underline;
+}
+
+
 code {
 	font-family: monospace;
 }
@@ -372,6 +377,7 @@ table.solves * {
 .race-open {
 	text-align: right;
 }
+
 
 @media screen and (max-width: 988px) {
 	html {
