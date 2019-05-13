@@ -14,11 +14,13 @@ class Confirmation extends React.Component {
       return;
     }
     fetch(`${process.env.REACT_APP_BACKEND_URL}/user_confirm/${confirmationId}`)
-      .then(response => response.json().then(body => ({ body, status: response.status })))
+      .then(response =>
+        response.json().then(body => ({ body, status: response.status }))
+      )
       .then(({ body }) => {
         this.setState({ status: body.message });
       })
-      .catch((error) => {
+      .catch(error => {
         this.setState({ status: '(error) see console for info' });
         console.log(error);
       });
