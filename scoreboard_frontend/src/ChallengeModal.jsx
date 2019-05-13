@@ -15,7 +15,7 @@ class ChallengeModal extends React.Component {
     this.hashTimestamp = null;
     this.timerID = null;
     this.worker = new Worker('worker.js');
-    this.worker.onmessage = (message) => {
+    this.worker.onmessage = message => {
       if (message.data.complete) {
         this.submit(message.data.nonce);
       } else {
@@ -35,15 +35,15 @@ class ChallengeModal extends React.Component {
     }
   }
 
-  handleFlagChange = (event) => {
+  handleFlagChange = event => {
     this.setState({ ...this.state, flag: event.target.value });
-  }
+  };
 
-  handleKeyPress = (event) => {
+  handleKeyPress = event => {
     if (!this.state.buttonDisabled && event.key === 'Enter') {
       this.handleSubmit();
     }
-  }
+  };
 
   handleSubmit = () => {
     let prefix;
@@ -64,16 +64,25 @@ class ChallengeModal extends React.Component {
       }
       this.worker.postMessage({
         prefix,
-        value: `${this.props.challengeId}!${this.state.flag}!${this.props.token}!${this.hashTimestamp}`,
+        value: `${this.props.challengeId}!${this.state.flag}!${
+          this.props.token
+        }!${this.hashTimestamp}`,
       });
       return;
     }
     this.setState({ ...this.state, status: validation });
-  }
+  };
 
   loadData = () => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/challenge/${this.props.challengeId}/${this.props.token}`, { method: 'GET' })
-      .then(response => response.json().then(body => ({ body, status: response.status })))
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/challenge/${
+        this.props.challengeId
+      }/${this.props.token}`,
+      { method: 'GET' }
+    )
+      .then(response =>
+        response.json().then(body => ({ body, status: response.status }))
+      )
       .then(({ body, status }) => {
         if (status === 401) {
           this.props.onTokenExpired();
@@ -91,12 +100,12 @@ class ChallengeModal extends React.Component {
         const description = converter.makeHtml(body.message);
         this.setState({ ...this.state, description });
       })
-      .catch((error) => {
+      .catch(error => {
         console.log(error);
       });
-  }
+  };
 
-  submit = (nonce) => {
+  submit = nonce => {
     const requestData = {
       challenge_id: this.props.challengeId,
       flag: this.state.flag,
@@ -109,7 +118,10 @@ class ChallengeModal extends React.Component {
       body: JSON.stringify(requestData),
       headers: { 'Content-Type': 'application/json' },
       method: 'POST',
-    }).then(response => response.json().then(body => ({ body, status: response.status })))
+    })
+      .then(response =>
+        response.json().then(body => ({ body, status: response.status }))
+      )
       .then(({ body, status }) => {
         if (status === 201) {
           this.props.onSolve();
@@ -129,11 +141,15 @@ class ChallengeModal extends React.Component {
           status: body.message,
         });
       })
-      .catch((error) => {
-        this.setState({ ...this.state, buttonDisabled: false, status: '(error) see console for info' });
+      .catch(error => {
+        this.setState({
+          ...this.state,
+          buttonDisabled: false,
+          status: '(error) see console for info',
+        });
         console.log(error);
       });
-  }
+  };
 
   tick() {
     this.countDown -= 1;
@@ -149,7 +165,9 @@ class ChallengeModal extends React.Component {
       return;
     }
     const plural = this.countDown === 1 ? '' : 's';
-    const status = `You are submitting too frequently. Try again in ${this.countDown} second${plural}.`;
+    const status = `You are submitting too frequently. Try again in ${
+      this.countDown
+    } second${plural}.`;
     this.setState({
       ...this.state,
       status,
@@ -158,9 +176,11 @@ class ChallengeModal extends React.Component {
 
   render() {
     let status;
-    const buttonText = this.state.buttonDisabled ? 'Please Wait' : 'Submit Flag';
+    const buttonText = this.state.buttonDisabled
+      ? 'Please Wait'
+      : 'Submit Flag';
     if (this.state.status !== '') {
-      status = (<div className="wrapped">Status: {this.state.status}</div>);
+      status = <div className="wrapped">Status: {this.state.status}</div>;
     }
 
     let form = '';
@@ -168,12 +188,27 @@ class ChallengeModal extends React.Component {
       form = (
         <div>
           <div className="form-group">
-            <label htmlFor="flag">Flag<br />
-              <input id="flag" onChange={this.handleFlagChange} onKeyPress={this.handleKeyPress} readOnly={this.state.buttonDisabled} type="text" value={this.state.flag} />
+            <label htmlFor="flag">
+              Flag
+              <br />
+              <input
+                id="flag"
+                onChange={this.handleFlagChange}
+                onKeyPress={this.handleKeyPress}
+                readOnly={this.state.buttonDisabled}
+                type="text"
+                value={this.state.flag}
+              />
             </label>
           </div>
           <div className="form-group">
-            <input className="button" disabled={this.state.buttonDisabled} onClick={this.handleSubmit} type="button" value={buttonText} />
+            <input
+              className="button"
+              disabled={this.state.buttonDisabled}
+              onClick={this.handleSubmit}
+              type="button"
+              value={buttonText}
+            />
           </div>
         </div>
       );

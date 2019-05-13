@@ -14,7 +14,7 @@ class LogInModal extends React.Component {
     };
     this.hashTimestamp = null;
     this.worker = new Worker('worker.js');
-    this.worker.onmessage = (message) => {
+    this.worker.onmessage = message => {
       if (message.data.complete) {
         this.logIn(message.data.nonce);
       } else {
@@ -27,22 +27,29 @@ class LogInModal extends React.Component {
     this.worker.terminate();
   }
 
-  handleEmailChange = (event) => {
+  handleEmailChange = event => {
     this.setState({ ...this.state, email: strip(event.target.value) });
-  }
+  };
 
-  handleKeyPress = (event) => {
+  handleKeyPress = event => {
     if (!this.state.buttonDisabled && event.key === 'Enter') {
       this.handleLogIn();
     }
-  }
+  };
 
   handleLogIn = () => {
     let validation;
-    if (this.state.email.length < 6 || this.state.email.length > 320
-      || !this.state.email.includes('@') || !this.state.email.includes('.')) {
+    if (
+      this.state.email.length < 6 ||
+      this.state.email.length > 320 ||
+      !this.state.email.includes('@') ||
+      !this.state.email.includes('.')
+    ) {
       validation = 'invalid email';
-    } else if (this.state.password.length < 10 || this.state.password.length > 72) {
+    } else if (
+      this.state.password.length < 10 ||
+      this.state.password.length > 72
+    ) {
       validation = 'invalid password';
     } else {
       this.hashTimestamp = parseInt(Date.now() / 1000, 10);
@@ -53,18 +60,20 @@ class LogInModal extends React.Component {
       });
       this.worker.postMessage({
         prefix: '0123',
-        value: `${this.state.email}!${this.state.password}!${this.hashTimestamp}`,
+        value: `${this.state.email}!${this.state.password}!${
+          this.hashTimestamp
+        }`,
       });
       return;
     }
     this.setState({ ...this.state, status: validation });
-  }
+  };
 
-  handlePasswordChange = (event) => {
+  handlePasswordChange = event => {
     this.setState({ ...this.state, password: event.target.value });
-  }
+  };
 
-  logIn = (nonce) => {
+  logIn = nonce => {
     const requestData = {
       email: this.state.email,
       nonce,
@@ -76,7 +85,10 @@ class LogInModal extends React.Component {
       body: JSON.stringify(requestData),
       headers: { 'Content-Type': 'application/json' },
       method: 'POST',
-    }).then(response => response.json().then(body => ({ body, status: response.status })))
+    })
+      .then(response =>
+        response.json().then(body => ({ body, status: response.status }))
+      )
       .then(({ body, status }) => {
         if (status === 200) {
           this.props.setAuthentication(body.message);
@@ -88,17 +100,21 @@ class LogInModal extends React.Component {
           status: body.message,
         });
       })
-      .catch((error) => {
-        this.setState({ ...this.state, buttonDisabled: false, status: '(error) see console for info' });
+      .catch(error => {
+        this.setState({
+          ...this.state,
+          buttonDisabled: false,
+          status: '(error) see console for info',
+        });
         console.log(error);
       });
-  }
+  };
 
   render() {
     let status;
     const buttonText = this.state.buttonDisabled ? 'Please Wait' : 'Log In';
     if (this.state.status !== '') {
-      status = (<div className="wrapped">Status: {this.state.status}</div>);
+      status = <div className="wrapped">Status: {this.state.status}</div>;
     }
 
     return (
@@ -106,17 +122,40 @@ class LogInModal extends React.Component {
         <button onClick={this.props.onClose}>X</button>
         <h1>Log In</h1>
         <div className="form-group">
-          <label htmlFor="email">Email Address<br />
-            <input id="email" onChange={this.handleEmailChange} onKeyPress={this.handleKeyPress} readOnly={this.state.buttonDisabled} type="text" value={this.state.email} />
+          <label htmlFor="email">
+            Email Address
+            <br />
+            <input
+              id="email"
+              onChange={this.handleEmailChange}
+              onKeyPress={this.handleKeyPress}
+              readOnly={this.state.buttonDisabled}
+              type="text"
+              value={this.state.email}
+            />
           </label>
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password<br />
-            <input id="password" onChange={this.handlePasswordChange} onKeyPress={this.handleKeyPress} type="password" value={this.state.password} />
+          <label htmlFor="password">
+            Password
+            <br />
+            <input
+              id="password"
+              onChange={this.handlePasswordChange}
+              onKeyPress={this.handleKeyPress}
+              type="password"
+              value={this.state.password}
+            />
           </label>
         </div>
         <div className="form-group">
-          <input className="button" disabled={this.state.buttonDisabled} onClick={this.handleLogIn} type="button" value={buttonText} />
+          <input
+            className="button"
+            disabled={this.state.buttonDisabled}
+            onClick={this.handleLogIn}
+            type="button"
+            value={buttonText}
+          />
         </div>
         {status}
       </div>

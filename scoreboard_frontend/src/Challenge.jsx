@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 function Challenge(props) {
-  const {
-    tags, points, solveCount, solved, title,
-  } = props;
+  const { tags, points, solveCount, solved, title } = props;
 
   let className = 'menu-header';
   if (solved) {
@@ -26,18 +24,13 @@ function Challenge(props) {
     onClick = () => props.onClick(props);
     menuClasses += ' logged-in';
   }
-	if (solved)
-	{
-		menuClasses += ' menu-solved';
-	}
-	let point_display = (
-		<div className="menu-points">{points} pts</div>
-	);
-	if (props.isSpeedrun) {
-		point_display = (
-			<span></span>
-		);
-	}
+  if (solved) {
+    menuClasses += ' menu-solved';
+  }
+  let point_display = <div className="menu-points">{points} pts</div>;
+  if (props.isSpeedrun) {
+    point_display = <span />;
+  }
 
   return (
     <div
@@ -45,19 +38,15 @@ function Challenge(props) {
       onClick={onClick}
       onKeyPress={() => {}}
       role="presentation"
-      >
-	  {point_display}
-	  <div className="menu-lower">
-		<h3 className={className}>{title}</h3>
-		<div className="menu-box">
-          <div className="menu-text">
-			{tags}
-          </div>
-		  <div className="menu-text">		
-			{status}
-		  </div>
-		</div>
-	  </div>
+    >
+      {point_display}
+      <div className="menu-lower">
+        <h3 className={className}>{title}</h3>
+        <div className="menu-box">
+          <div className="menu-text">{tags}</div>
+          <div className="menu-text">{status}</div>
+        </div>
+      </div>
     </div>
   );
 }

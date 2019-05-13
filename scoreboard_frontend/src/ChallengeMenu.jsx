@@ -10,49 +10,49 @@ class ChallengeMenu extends React.Component {
       'amuse bouche': {
         column: 'left',
         style: 'category-first-contact',
-		newName: 'First Contact',
+        newName: 'First Contact',
       },
       appetizers: {
         column: 'left',
         style: 'category-space',
-		newName: 'Final Frontier',
+        newName: 'Final Frontier',
       },
       'from the grill': {
-          column: 'left',
-          style: 'category-weapons',
-		  newName: 'Weapons',
+        column: 'left',
+        style: 'category-weapons',
+        newName: 'Weapons',
       },
       'signature dishes': {
-          column: 'left',
-          style: 'category-science',
-		  newName: 'Science',
+        column: 'left',
+        style: 'category-science',
+        newName: 'Science',
       },
       'fruits and desserts': {
         column: 'right',
         style: 'category-diplomacy',
-		newName: 'Diplomacy',
+        newName: 'Diplomacy',
       },
-      'speedrun': {
-          column: 'right',
-          style: 'category-speedrun',
-		  newName: 'Speedrun',
+      speedrun: {
+        column: 'right',
+        style: 'category-speedrun',
+        newName: 'Speedrun',
       },
     };
   }
 
   componentWillUnmount = () => {
     this.props.onUnload();
-  }
+  };
 
-  buildSections = (sectionTitle) => {
-      const section = this.sectionInfo[sectionTitle];
+  buildSections = sectionTitle => {
+    const section = this.sectionInfo[sectionTitle];
 
     const openChallenges = this.props.challenges[sectionTitle] || [];
     const unopenedChallenges = Array.from(
       Array(this.props.unopened[sectionTitle] || 0),
-      (_, i) => ({ unopened: i + 1000 }),
+      (_, i) => ({ unopened: i + 1000 })
     );
-	const isSpeedrun = sectionTitle === "speedrun";
+    const isSpeedrun = sectionTitle === 'speedrun';
 
     return (
       <ChallengeSection
@@ -62,36 +62,40 @@ class ChallengeMenu extends React.Component {
         key={section.newName}
         onClick={this.props.onClick}
         title={section.newName}
-		isSpeedrun={isSpeedrun}
+        isSpeedrun={isSpeedrun}
       />
     );
-  }
+  };
 
   render() {
-    const leftSections = Object.keys(this.sectionInfo).filter(sectionTitle =>
-      this.sectionInfo[sectionTitle].column === 'left').map(this.buildSections);
-    const rightSections = Object.keys(this.sectionInfo).filter(sectionTitle =>
-      this.sectionInfo[sectionTitle].column === 'right').map(this.buildSections);
+    const leftSections = Object.keys(this.sectionInfo)
+      .filter(sectionTitle => this.sectionInfo[sectionTitle].column === 'left')
+      .map(this.buildSections);
+    const rightSections = Object.keys(this.sectionInfo)
+      .filter(sectionTitle => this.sectionInfo[sectionTitle].column === 'right')
+      .map(this.buildSections);
 
     return (
-		<div>
-		  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNZQFep3eFFIAMm2Riz3H8nwqE-gOeEtbKSwxsOUiWuSlSVg/viewform" className="feedback-link">The OOO requests your FEEDBACK on the game, please fill out this form</a>
-          <h1 className="lcars-row fill">Cadet Training Program</h1>
-          <div className="lcars-row fill">
-			<div className="lcars-column fill">
-              {leftSections}
-			</div>
-			<div className="lcars-column fill">
-              {rightSections}
-			</div>
-          </div>
+      <div>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeNZQFep3eFFIAMm2Riz3H8nwqE-gOeEtbKSwxsOUiWuSlSVg/viewform"
+          className="feedback-link"
+        >
+          The OOO requests your FEEDBACK on the game, please fill out this form
+        </a>
+        <h1 className="lcars-row fill">Cadet Training Program</h1>
+        <div className="lcars-row fill">
+          <div className="lcars-column fill">{leftSections}</div>
+          <div className="lcars-column fill">{rightSections}</div>
+        </div>
       </div>
     );
   }
 }
 ChallengeMenu.propTypes = {
   authenticated: PropTypes.bool.isRequired,
-  challenges: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.object)).isRequired,
+  challenges: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.object))
+    .isRequired,
   onClick: PropTypes.func.isRequired,
   onUnload: PropTypes.func.isRequired,
   unopened: PropTypes.objectOf(PropTypes.number).isRequired,
