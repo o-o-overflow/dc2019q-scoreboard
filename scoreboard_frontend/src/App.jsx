@@ -248,16 +248,18 @@ class App extends React.Component {
       const place = idx + 1;
       if (place in overall_place_points) {
         speedrunPointsByTeam.overall[team.name] = overall_place_points[place];
+      } else {
+        return null;
       }
     });
 
     // increase points by the speedrun overall
-    Object.keys(speedrunPointsByTeam.overall).map((team, index) => {
+    Object.keys(speedrunPointsByTeam.overall).forEach((team, index) => {
       pointsByTeam[team] += speedrunPointsByTeam.overall[team];
     });
 
     // increase points by the speedrun individual
-    Object.keys(speedrunPointsByTeam.individual).map((team, index) => {
+    Object.keys(speedrunPointsByTeam.individual).forEach((team, index) => {
       pointsByTeam[team] += speedrunPointsByTeam.individual[team];
     });
 
