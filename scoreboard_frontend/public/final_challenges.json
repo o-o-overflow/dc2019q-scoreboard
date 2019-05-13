@@ -1,0 +1,389 @@
+{
+  "ASRybaB": {
+    "description": "Just RSA\n\n`asrybab.quals2019.oooverflow.io 1280`\n\nFiles:\n * [challenge.py](https://s3.us-east-2.amazonaws.com/oooverflow-challs/009169be1eaf1e6c16db9349188a5d580f72ecf297300f08d558dc2b43ef1fdb/challenge.py)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/009169be1eaf1e6c16db9349188a5d580f72ecf297300f08d558dc2b43ef1fdb/challenge.py"
+    ],
+    "flag_hash": "201bdc4cdc866061dea3cdd3c1bfc4d56d4e09f191185ec182329b5ac00ad3f6",
+    "tags": [
+      "crypto",
+      "reverse"
+    ]
+  },
+  "Hotel-California": {
+    "description": "You know the rules: you can check out any time you like but you can never leave! (flag in /FLAG.txt)\n\n`hotelcalifornia.quals2019.oooverflow.io 7777`\n\nFiles:\n * [hotel_california](https://s3.us-east-2.amazonaws.com/oooverflow-challs/4df053d71ee07dee43349db31a2a862614ff68d46a8fa1455b4ab3ef39f97186/hotel_california)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/4df053d71ee07dee43349db31a2a862614ff68d46a8fa1455b4ab3ef39f97186/hotel_california"
+    ],
+    "flag_hash": "a6e632069fc758a539768169b6a8eeb86ec822b9397a276b41c6aead058bd6a6",
+    "tags": [
+      "shellcoding"
+    ]
+  },
+  "LCARS000": {
+    "description": "Library Computer Access/Retrieval System\n\n`lcars000.quals2019.oooverflow.io 5000`\n\nFiles:\n * [LCARS](https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/LCARS)\n * [crypto.sys](https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/crypto.sys)\n * [echo.sys](https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/echo.sys)\n * [init.sys](https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/init.sys)\n * [loader.sys](https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/loader.sys)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/LCARS",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/init.sys",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/loader.sys",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/crypto.sys",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/echo.sys"
+    ],
+    "flag_hash": "d66acc3ecff2be3a2d3bae9bb947d3b0160d2a9611454ca4e258f6fef2b6b84c",
+    "tags": [
+      "reverse",
+      "shellcode"
+    ]
+  },
+  "LCARS002": {
+    "description": "Same as LCARS000, but flag is `flag3.txt`",
+    "file_urls": [],
+    "flag_hash": "b584443b4b686d9617c17a7a9150ef40664df1f7814b156e176c845a69c8abb0",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "LCARS022": {
+    "description": "Library Computer Access/Retrieval System (files are encrypted with flag1.txt of LCARS000, flag is in flag22.txt)\n\n`lcars022.quals2019.oooverflow.io 5000`\n\nFiles:\n * [LCARS.zip](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b3970770be6b98f34a3f41b825b4001f6d7ce228feeb586d7dd97ceff18bbc86/LCARS.zip)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b3970770be6b98f34a3f41b825b4001f6d7ce228feeb586d7dd97ceff18bbc86/LCARS.zip"
+    ],
+    "flag_hash": "9200c459eb7cb6395dbf7b1e5709ceb0dd94c5ee95fd6077d1bdfdf4cb7f1717",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "RTOoOS": {
+    "description": "i submitted this for my first operating system homework at starfleet academy. scotty gave me a poor grade on it because he said this is exploitable.\n\n`rtooos.quals2019.oooverflow.io 5000`\n\nFiles:\n * [crux_7377a1f43e35924971ef1b172c080e03131bed56](https://s3.us-east-2.amazonaws.com/oooverflow-challs/c72924d31324d0471be71a2fd5b2237eb78a5de9304194667b0468883bd84574/crux_7377a1f43e35924971ef1b172c080e03131bed56)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/c72924d31324d0471be71a2fd5b2237eb78a5de9304194667b0468883bd84574/crux_7377a1f43e35924971ef1b172c080e03131bed56"
+    ],
+    "flag_hash": "d67ca6dd160ac10fa356060eaad3dcaa14899d627a6c251b97d44e7ad7851376",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "Return_to_shellQL": {
+    "description": "La Forge built a new web application platform for our ShellQL product. Can you get the flag out?  The flag is the file `/flag`. Although the flag is not in the database this time; using shellQL to query the database might be helpful.\n\nhttp://shellretql.quals2019.oooverflow.io:9090\n\nAttention hackers! We have undone massive horizontal scaling of shellretql in favor of massive vertical scaling. Though our test exploits have been successfully landing on this service the whole CTF, this change more closely replicates conditions when it first launched. HACK IT!\n\nHash of the flag 9214822b06e543db1bd94951e0955d1e0899bce16b490c18cd35ef8cd8d21c432424fa19c94e1c75b375db162371c9c5f39ec894890861e6cbcdc57833ef9813\n\n\nFiles:\n * [shellme.so](https://s3.us-east-2.amazonaws.com/oooverflow-challs/466d031af8a9f06440f3a4ece97072a28385e863f99e95176f8be5f98e4648c3/shellme.so)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/466d031af8a9f06440f3a4ece97072a28385e863f99e95176f8be5f98e4648c3/shellme.so"
+    ],
+    "flag_hash": "846d36f4fa3ce731707ec51143dc99f5fa2c75ae93cda7734d5024a8a7e4bce6",
+    "tags": [
+      "web"
+    ]
+  },
+  "VeryAndroidoso": {
+    "description": "With the right flag, it will print 'Success!' on the screen and on logcat. Good Luck!\n\nFiles:\n * [ooo.defcon2019.quals.veryandroidoso.apk](https://s3.us-east-2.amazonaws.com/oooverflow-challs/23d476e98b3770fbd2d6bddcd794605640c1994a47e698fa163729669f63ae19/ooo.defcon2019.quals.veryandroidoso.apk)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/23d476e98b3770fbd2d6bddcd794605640c1994a47e698fa163729669f63ae19/ooo.defcon2019.quals.veryandroidoso.apk"
+    ],
+    "flag_hash": "bc4c4bafa73d6b62b121d994e3e1ed2fba4814789dd32662b67a72161b338d96",
+    "tags": [
+      "reverse",
+      "Android"
+    ]
+  },
+  "babyheap": {
+    "description": "Yet another babyheap.\n\n`babyheap.quals2019.oooverflow.io 5000`\n\nFiles:\n * [babyheap](https://s3.us-east-2.amazonaws.com/oooverflow-challs/1e5bd6bd8ace2e1ff5be1cd5639b022df9da8fbd6306209038f521968d788b89/babyheap)\n * [libc.so](https://s3.us-east-2.amazonaws.com/oooverflow-challs/1e5bd6bd8ace2e1ff5be1cd5639b022df9da8fbd6306209038f521968d788b89/libc.so)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/1e5bd6bd8ace2e1ff5be1cd5639b022df9da8fbd6306209038f521968d788b89/babyheap",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/1e5bd6bd8ace2e1ff5be1cd5639b022df9da8fbd6306209038f521968d788b89/libc.so"
+    ],
+    "flag_hash": "6069564687716fdba0bf051891441c0271386011bcb96986164609341edf3f4d",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "babytrace": {
+    "description": "Announcing the beta launch of Program Interactive Trace As a Symbolic Service: PITASS!\n\n`babytrace.quals2019.oooverflow.io 5000`\n\nFiles:\n * [Dockerfile](https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/Dockerfile)\n * [headerquery](https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/headerquery)\n * [pitas.py](https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/pitas.py)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/Dockerfile",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/pitas.py",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/headerquery"
+    ],
+    "flag_hash": "287be74519063a74ea7f20b0428ae2a9ed90cb54dd3929b0484fea6ec529e0f7",
+    "tags": [
+      "reverse"
+    ]
+  },
+  "cant_even_unplug_it": {
+    "description": "You know, we had this up and everything. Prepped nice HTML5, started deploying on a military-grade-secrets.dev subdomain, got the certificate, the whole shabang. Boss-man got moody and wanted another name, we set up the new names and all. Finally he got scared and unplugged the server. Can you believe it? Unplugged. Like that can keep it secret...\n\nFiles:\n * [HINT](https://s3.us-east-2.amazonaws.com/oooverflow-challs/6c5d65d4abdc64e599ac669d063dcdc325de8904ffc7a103e6739e14d1f0c917/HINT)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/6c5d65d4abdc64e599ac669d063dcdc325de8904ffc7a103e6739e14d1f0c917/HINT"
+    ],
+    "flag_hash": "cd411e614c5fd7aaac6fd01002ee9719041d01687d47bcfee89540e27b055127",
+    "tags": [
+      "web",
+      "recon",
+      "intro"
+    ]
+  },
+  "chainedrsa": {
+    "description": "Read carefully. Messages speak.\n\n`chainedrsa.quals2019.oooverflow.io 5000`\n\nFiles:\n * [service](https://s3.us-east-2.amazonaws.com/oooverflow-challs/e842e446bc7b7601919b320281cf7a9f6208563d95a68b0083275160a62c31cb/service)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/e842e446bc7b7601919b320281cf7a9f6208563d95a68b0083275160a62c31cb/service"
+    ],
+    "flag_hash": "fd837f68337f2ad36cd444752a19f98f5d567a886caab0fafd895dd1f92e174d",
+    "tags": [
+      "crypto",
+      "reverse"
+    ]
+  },
+  "election_coin": {
+    "description": "Coming soon to an ICO near you: ElectionCoin!  Cut to the chase and buy your way to victory.\n\n\n`election_coin.quals2019.oooverflow.io 8888`\n\nFiles:\n * [election_coin](https://s3.us-east-2.amazonaws.com/oooverflow-challs/a40335332c458447683e874477efdc4fa4d1f7a81ac300dfc6b60ca56ada0806/election_coin)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/a40335332c458447683e874477efdc4fa4d1f7a81ac300dfc6b60ca56ada0806/election_coin"
+    ],
+    "flag_hash": "a474ed08ee02894447e778b0900794973ed53a9e227994bcd52e7c21fc2ccd9c",
+    "tags": [
+      "pwn",
+      "reverse"
+    ]
+  },
+  "gloryhost": {
+    "description": "I sung of Chaos and Eternal Night,\nTaught by the heav'nly Muse to venture down\nThe dark descent, and up to reascend...\n\n\n`gloryhost.quals2019.oooverflow.io 9999`\n\nFiles:\n * [gloryhost](https://s3.us-east-2.amazonaws.com/oooverflow-challs/a9a155e29252d166457c507021a8b85fbcfbb6c55816a04ec9656d042dba5afc/gloryhost)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/a9a155e29252d166457c507021a8b85fbcfbb6c55816a04ec9656d042dba5afc/gloryhost"
+    ],
+    "flag_hash": "b1a43788563173f7a8d987d87edacc8b26ffd242b8fef3ddd58e24e6413ac827",
+    "tags": [
+      "pwn",
+      "reverse"
+    ]
+  },
+  "know_your_mem": {
+    "description": "Find the flag page in memory, 64-bit edition. Timeouts are strict, please test locally first! There's a simplified version to help with that.\n\n`know_your_mem.quals2019.oooverflow.io 4669`\n\nFiles:\n * [Makefile](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/Makefile)\n * [README.md](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/README.md)\n * [know_your_mem.c](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/know_your_mem.c)\n * [shellcode.c](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/shellcode.c)\n * [simplified.c](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/simplified.c)\n * [simplified_shellcode.so.c](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/simplified_shellcode.so.c)\n * [topkt.py](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/topkt.py)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/know_your_mem.c",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/simplified.c",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/simplified_shellcode.so.c",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/shellcode.c",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/Makefile",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/topkt.py",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b67874ff3f3518ad7ee4e4ee0af11a85224ff292e586828031ee587673b59de0/README.md"
+    ],
+    "flag_hash": "98f8f08e83180ada504c19fe5506e2e1b080ed05622c7aeb037dbedb05ed589c",
+    "tags": [
+      "intro"
+    ]
+  },
+  "mamatrace": {
+    "description": "Turns out that some binaries just shouldn't be traced. These ones should be safe!\n\n`mamatrace.quals2019.oooverflow.io 5000`\n\nFiles:\n * [Dockerfile](https://s3.us-east-2.amazonaws.com/oooverflow-challs/65f3791fb977bf209a0af8f3de89ea66b2956523b49596746c09c38e2443e729/Dockerfile)\n * [flagleak](https://s3.us-east-2.amazonaws.com/oooverflow-challs/65f3791fb977bf209a0af8f3de89ea66b2956523b49596746c09c38e2443e729/flagleak)\n * [headerquery2](https://s3.us-east-2.amazonaws.com/oooverflow-challs/65f3791fb977bf209a0af8f3de89ea66b2956523b49596746c09c38e2443e729/headerquery2)\n * [pitas.py](https://s3.us-east-2.amazonaws.com/oooverflow-challs/65f3791fb977bf209a0af8f3de89ea66b2956523b49596746c09c38e2443e729/pitas.py)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/65f3791fb977bf209a0af8f3de89ea66b2956523b49596746c09c38e2443e729/Dockerfile",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/65f3791fb977bf209a0af8f3de89ea66b2956523b49596746c09c38e2443e729/pitas.py",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/65f3791fb977bf209a0af8f3de89ea66b2956523b49596746c09c38e2443e729/headerquery2",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/65f3791fb977bf209a0af8f3de89ea66b2956523b49596746c09c38e2443e729/flagleak"
+    ],
+    "flag_hash": "003f4be6d5f33f70932d44764c03f6ff3c40c8fc6f4f8f8b8b22958199bf6cbf",
+    "tags": [
+      "reverse"
+    ]
+  },
+  "nodb": {
+    "description": "Welcome to the future. The future of no data breaches!\n\nhttp://nodb.quals2019.oooverflow.io:5000/\n\n\n`nodb.quals2019.oooverflow.io 5000`",
+    "file_urls": [],
+    "flag_hash": "39ba99a24f60f579bbe383f45a1944dee4bc8f134f68d48a9522329b7582c835",
+    "tags": [
+      "pwn",
+      "web"
+    ]
+  },
+  "ooops": {
+    "description": "On our corporate network, the only overflow is the Order of the Overflow.\n\nFiles:\n * [info.pac](https://s3.us-east-2.amazonaws.com/oooverflow-challs/b48fb18a0837e8e6840d5101ff44bb9ee5ee1d22846580487ccce756b966f6b2/info.pac)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/b48fb18a0837e8e6840d5101ff44bb9ee5ee1d22846580487ccce756b966f6b2/info.pac"
+    ],
+    "flag_hash": "80767db5f89f8d984c7db839c76b9e1e306886580bfd29078ba77656c23921fd",
+    "tags": [
+      "web"
+    ]
+  },
+  "papatrace": {
+    "description": "It really takes a whole CTF family to make a secure tracing service!\n\n`papatrace.quals2019.oooverflow.io 5000`\n\nFiles:\n * [Dockerfile](https://s3.us-east-2.amazonaws.com/oooverflow-challs/1c50b9fb6d91266bd6daa49e099d6c9ac71961185d821a65cceae1950d585532/Dockerfile)\n * [flagleak](https://s3.us-east-2.amazonaws.com/oooverflow-challs/1c50b9fb6d91266bd6daa49e099d6c9ac71961185d821a65cceae1950d585532/flagleak)\n * [headerquery2](https://s3.us-east-2.amazonaws.com/oooverflow-challs/1c50b9fb6d91266bd6daa49e099d6c9ac71961185d821a65cceae1950d585532/headerquery2)\n * [pitas.py](https://s3.us-east-2.amazonaws.com/oooverflow-challs/1c50b9fb6d91266bd6daa49e099d6c9ac71961185d821a65cceae1950d585532/pitas.py)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/1c50b9fb6d91266bd6daa49e099d6c9ac71961185d821a65cceae1950d585532/Dockerfile",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/1c50b9fb6d91266bd6daa49e099d6c9ac71961185d821a65cceae1950d585532/pitas.py",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/1c50b9fb6d91266bd6daa49e099d6c9ac71961185d821a65cceae1950d585532/headerquery2",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/1c50b9fb6d91266bd6daa49e099d6c9ac71961185d821a65cceae1950d585532/flagleak"
+    ],
+    "flag_hash": "42724fc872f79ee847cacfe8b442c28e7aad0387c50f387fcf941b436ca428a1",
+    "tags": [
+      "reverse"
+    ]
+  },
+  "redacted-puzzle": {
+    "description": "Everything you need is in this file.\n\nFiles:\n * [redacted-puzzle.gif](https://s3.us-east-2.amazonaws.com/oooverflow-challs/f1b69d1d5c8e874ffae9ce29d39435eda78ce7ae44428c88ff29cb368f8fead6/redacted-puzzle.gif)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/f1b69d1d5c8e874ffae9ce29d39435eda78ce7ae44428c88ff29cb368f8fead6/redacted-puzzle.gif"
+    ],
+    "flag_hash": "a145460c12ff69eaaff2420cb01d3e341889dffe188f43619b31bb986a94d19c",
+    "tags": [
+      "potpourri"
+    ]
+  },
+  "shitorrent": {
+    "description": "we created this tool for sending messages to distant ships, but i don't think it's quite ready to replace the communicator\n\n`34.214.75.168 4747`\n\nFiles:\n * [shitorrent](https://s3.us-east-2.amazonaws.com/oooverflow-challs/134580603e2e148a58820e3d7e9d35197d325c5558df65cdd2e3333535cfecc3/shitorrent)\n * [shitorrent.cc](https://s3.us-east-2.amazonaws.com/oooverflow-challs/134580603e2e148a58820e3d7e9d35197d325c5558df65cdd2e3333535cfecc3/shitorrent.cc)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/134580603e2e148a58820e3d7e9d35197d325c5558df65cdd2e3333535cfecc3/shitorrent",
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/134580603e2e148a58820e3d7e9d35197d325c5558df65cdd2e3333535cfecc3/shitorrent.cc"
+    ],
+    "flag_hash": "aae44ab7575db28b3068c890b95c80af7405fd3b266c4e41300f8c4408de4018",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-001": {
+    "description": "The Fast and the Furious\n\nFor all speedrun challenges, flag is in `/flag`\n\n\n`speedrun-001.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-001](https://s3.us-east-2.amazonaws.com/oooverflow-challs/c3174710ab5f90f46fdf555ae346b6a40fc647ef6aa51d05c2b19379d4c06048/speedrun-001)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/c3174710ab5f90f46fdf555ae346b6a40fc647ef6aa51d05c2b19379d4c06048/speedrun-001"
+    ],
+    "flag_hash": "aff40b4e8a588bac6d00c0c122f2036eb7cc0ef883fd3cc28746160f8118b209",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-002": {
+    "description": "2 Fast 2 Furious\n\n`speedrun-002.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-002](https://s3.us-east-2.amazonaws.com/oooverflow-challs/08f146b46e6ce8d37e758f842d8c90f4ce773cfacf8615a9e3a020a41aa58e25/speedrun-002)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/08f146b46e6ce8d37e758f842d8c90f4ce773cfacf8615a9e3a020a41aa58e25/speedrun-002"
+    ],
+    "flag_hash": "e3b1079b122090244dbacb3352917bea12a30cb7452f9735f6b7cab5009e8305",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-003": {
+    "description": "The Fast and the Furious: Tokyo Drift\n\n`speedrun-003.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-003](https://s3.us-east-2.amazonaws.com/oooverflow-challs/f9c70ba28845521a271e9220f3fa103a19b5210bbcf2c1b41e4b80dc79f3efdc/speedrun-003)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/f9c70ba28845521a271e9220f3fa103a19b5210bbcf2c1b41e4b80dc79f3efdc/speedrun-003"
+    ],
+    "flag_hash": "1a14ae3ef8e2ed4494efa93b9bfb6637bb0216e4ea275a8ea67d0768d7854526",
+    "tags": [
+      "shellcode"
+    ]
+  },
+  "speedrun-004": {
+    "description": "Fast & Furious\n\n`speedrun-004.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-004](https://s3.us-east-2.amazonaws.com/oooverflow-challs/777b753f054df6bcd9f18ad8b1e86db8ce8ecab99ee7d944029df33727cd7b08/speedrun-004)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/777b753f054df6bcd9f18ad8b1e86db8ce8ecab99ee7d944029df33727cd7b08/speedrun-004"
+    ],
+    "flag_hash": "80860f1d929d1e2acdbc6db4a34fd00aab44b2983fa2f612387fa6c976296e38",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-005": {
+    "description": "Fast Five\n\n`speedrun-005.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-005](https://s3.us-east-2.amazonaws.com/oooverflow-challs/d4f0881f8138348b5886b5541f1788ebe836470ab7424eac8f0f59ac048ed087/speedrun-005)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/d4f0881f8138348b5886b5541f1788ebe836470ab7424eac8f0f59ac048ed087/speedrun-005"
+    ],
+    "flag_hash": "33eb16933ab2153d56c3169f309d6fb801855f1acf9238209bdd7262eba426d8",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-006": {
+    "description": "Fast & Furious 6\n\n`speedrun-006.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-006](https://s3.us-east-2.amazonaws.com/oooverflow-challs/92bfebb1d010c4371323edc08aaffa95c8e8bb00d5ff5fd4744bbc604eaeef75/speedrun-006)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/92bfebb1d010c4371323edc08aaffa95c8e8bb00d5ff5fd4744bbc604eaeef75/speedrun-006"
+    ],
+    "flag_hash": "2fba570ae036a1030f07ff31bcbba42180239aba955eb70ffac9eb21ff8835de",
+    "tags": [
+      "shellcoding"
+    ]
+  },
+  "speedrun-007": {
+    "description": "Furious 7\n\n`speedrun-007.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-007](https://s3.us-east-2.amazonaws.com/oooverflow-challs/26a7cb5ed11ec843a4d7e82f05cd55179e2f67b7ecc30828542c407bcb3028ca/speedrun-007)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/26a7cb5ed11ec843a4d7e82f05cd55179e2f67b7ecc30828542c407bcb3028ca/speedrun-007"
+    ],
+    "flag_hash": "7e2e64fe0119c753ceacc159886c0186cec22630a183cf973ab65441d7b0688a",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-008": {
+    "description": "The Fate of the Furious\n\n`speedrun-008.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-008](https://s3.us-east-2.amazonaws.com/oooverflow-challs/c7917538f40cdc589f5fda6c2426e638821c8ae48bd1f1c1b7c51712b0eb5d38/speedrun-008)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/c7917538f40cdc589f5fda6c2426e638821c8ae48bd1f1c1b7c51712b0eb5d38/speedrun-008"
+    ],
+    "flag_hash": "657fc8d80febbcb83dc71d332003f2a34c55d6ed4bf61483dd5d7b76e69aa3de",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-009": {
+    "description": "Fast & Furious Presents: Hobbs & Shaw\n\n`speedrun-009.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-009](https://s3.us-east-2.amazonaws.com/oooverflow-challs/19b43fd7dae6adc2a089d6965a6a27139cb17d3d714562f361be37e7e67c615e/speedrun-009)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/19b43fd7dae6adc2a089d6965a6a27139cb17d3d714562f361be37e7e67c615e/speedrun-009"
+    ],
+    "flag_hash": "1c2eb4045aae901865efcfe00a61567edc19b2a53b6a605ad788eea07a760c1e",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-010": {
+    "description": "Baby Driver\n\n`speedrun-010.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-010](https://s3.us-east-2.amazonaws.com/oooverflow-challs/39960a73f632deec9203dd7965982c877c3b248d16214e053f780c5b663bee31/speedrun-010)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/39960a73f632deec9203dd7965982c877c3b248d16214e053f780c5b663bee31/speedrun-010"
+    ],
+    "flag_hash": "f97fe2d5f5c0436fc28c12342111a1e59ff1cec095da1744d826db6b68255bca",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "speedrun-011": {
+    "description": "Rush\n\n`speedrun-011.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-011](https://s3.us-east-2.amazonaws.com/oooverflow-challs/ab36b7d690dcc3f240224aeaed705a7341d9f885b82d715f0bc525705e74a283/speedrun-011)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/ab36b7d690dcc3f240224aeaed705a7341d9f885b82d715f0bc525705e74a283/speedrun-011"
+    ],
+    "flag_hash": "5c27d54c8689ffaa33f8ea26a78174a933a5348704348abc5f2d15b7efc9aff4",
+    "tags": [
+      "shellcoding"
+    ]
+  },
+  "speedrun-012": {
+    "description": "The TranspOOOrter.\n\nhint: https://gist.github.com/adamdoupe/9fb1fed69421e789a0a623af912e456a\n\n\n`speedrun-012.quals2019.oooverflow.io 31337`\n\nFiles:\n * [speedrun-012](https://s3.us-east-2.amazonaws.com/oooverflow-challs/cd3b065319e3cbe48059b11d7faf7fa9278d830e2116efa920b3351fd89e5588/speedrun-012)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/cd3b065319e3cbe48059b11d7faf7fa9278d830e2116efa920b3351fd89e5588/speedrun-012"
+    ],
+    "flag_hash": "aebb1e1c60d5d7023207ec7c297e3de22862e6e87788aee7a57fc9f0faaea883",
+    "tags": [
+      "pwn"
+    ]
+  },
+  "tania": {
+    "description": "'Didn't touch, check the rules.' [cit.]\n\n`tania.quals2019.oooverflow.io 5000`\n\nFiles:\n * [tania](https://s3.us-east-2.amazonaws.com/oooverflow-challs/5e1bb5854246f0da350688bd22f1137fdc2061dc2c92aabbe625458158e59620/tania)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/5e1bb5854246f0da350688bd22f1137fdc2061dc2c92aabbe625458158e59620/tania"
+    ],
+    "flag_hash": "aaa07c47bd61d13c1d77366a0912fca238b51a097f503d26a15e016511367d5a",
+    "tags": [
+      "crypto"
+    ]
+  },
+  "vitor": {
+    "description": "'An attacker could trivially do XYZ.' [cit.]\n\nFiles:\n * [vitor.apk](https://s3.us-east-2.amazonaws.com/oooverflow-challs/ef696d8bb5f79d26ab5e3e37885cd9baca285a0cba220a99bca4270be23088d9/vitor.apk)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/ef696d8bb5f79d26ab5e3e37885cd9baca285a0cba220a99bca4270be23088d9/vitor.apk"
+    ],
+    "flag_hash": "026d75e55cedeeaaa4ea572d6ea880cd271d898a8e1f2504c4796eb0402b701e",
+    "tags": [
+      "reverse",
+      "android",
+      "crypto"
+    ]
+  },
+  "welcome_to_the_game": {
+    "description": "Welcome to the 2019 DEF CON CTF quals! Let's start it out with a free flag :)\nIf you can't submit it and get points there must be something very wrong, and we hope it's on your end :D\n\nFiles:\n * [flag](https://s3.us-east-2.amazonaws.com/oooverflow-challs/afc564d83398392265ddd338d532d9d3b5ceb601d09c18757dd2817947067fa2/flag)",
+    "file_urls": [
+      "https://s3.us-east-2.amazonaws.com/oooverflow-challs/afc564d83398392265ddd338d532d9d3b5ceb601d09c18757dd2817947067fa2/flag"
+    ],
+    "flag_hash": "67a337a550b5565ddf99511ef63b9adef6d5083ab34731f3de890348224c8ac0",
+    "tags": [
+      "welcoming"
+    ]
+  }
+}
