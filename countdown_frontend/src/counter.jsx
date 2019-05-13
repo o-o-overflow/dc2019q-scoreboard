@@ -3,7 +3,7 @@ import React from 'react';
 class Counter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { now: parseInt(Date.now() / 1000, 10) }
+    this.state = { now: parseInt(Date.now() / 1000, 10) };
   }
 
   componentDidMount() {
@@ -15,8 +15,7 @@ class Counter extends React.Component {
   }
 
   numberize(value, label) {
-    if (value === 1)
-      return `${value} ${label} `;
+    if (value === 1) return `${value} ${label} `;
     return `${value} ${label}s `;
   }
 
@@ -30,10 +29,11 @@ class Counter extends React.Component {
       clearInterval(this.timerID);
       return (
         <div className="countdown">
-          Hacking will begin soon...<br />
+          Hacking will begin soon...
+          <br />
           Please refresh, lightly.
         </div>
-      )
+      );
     }
 
     const secondsInMinute = 60;
