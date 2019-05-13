@@ -70,6 +70,9 @@ def main(argv):
     elif argv[1] == "blood":
         with psql_connection(db_password) as psql:
             blood(psql)
+    elif argv[1] == "solvecount":
+        with psql_connection(db_password) as psql:
+            solvecount(psql)
     else:
         print("\nUse:")
         print(
@@ -88,7 +91,11 @@ def main(argv):
             " %s timeline      \x1b[33m# Prints a hourly timeline of the game\x1b[0m"
             % argv[0]
         )
-        print(" %s blood         \x1b[33m# First blood \x1b[0m" % argv[0])
+        print(" %s blood         \x1b[33m# List of First blood\x1b[0m" % argv[0])
+        print(
+            " %s solvecount    \x1b[33m# How many teams solved how many challs\x1b[0m"
+            % argv[0]
+        )
         print("")
         sys.exit(0)
 
@@ -132,6 +139,23 @@ def last(psql, n):
         )
         for time, team, chall in cursor2.fetchall():
             print("\x1b[32m %35s \x1b[0m from %s" % (chall, team))
+
+
+def solvecount(psql):
+    counters = {}
+    with psql.cursor() as cursor2:
+        cursor2.execute("SELECT count(*) FROM solves GROUP by user_id;")
+        for (x,) in cursor2.fetchall():
+            if x in counters:
+                counters[x] += 1
+            else:
+                counters[x] = 1
+    l = list(counters.items())
+    l.sort(key=lambda x: x[0], reverse=True)
+    cumulative = 0
+    for n, teamcount in l:
+        cumulative += teamcount
+        print("%5d - %d teams" % (n, cumulative))
 
 
 def info_team(psql, team):
@@ -307,6 +331,7 @@ def challs_table(psql):
             print("%20s  :  CLOSE     -        -       -" % name)
     print("")
 
+
 def blood(psql):
     with psql.cursor() as cursor:
         # cursor.execute('SELECT id,team_name FROM users;')
@@ -315,7 +340,9 @@ def blood(psql):
         cursor.execute("SELECT id, name from challenges;")
         for (chall, name) in cursor.fetchall():
             with psql.cursor() as cursor2:
-                cursor2.execute("SELECT date_created FROM challenges WHERE id=%s;", (chall,))
+                cursor2.execute(
+                    "SELECT date_created FROM challenges WHERE id=%s;", (chall,)
+                )
                 opentime = cursor2.fetchone()
                 if not opentime:
                     continue
@@ -329,7 +356,9 @@ def blood(psql):
                     solvedby.sort(key=lambda x: x[0])
                     diff = solvedby[0][0] - opentime
                     when = diff_string(diff)
-                    print("\x1b[32m %30s \x1b[0m %s in %s" % ( name, solvedby[0][1], when))
+                    print(
+                        "\x1b[32m %30s \x1b[0m %s in %s" % (name, solvedby[0][1], when)
+                    )
 
 
 def teacheck(psql):
