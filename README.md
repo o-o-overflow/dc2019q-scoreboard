@@ -12,41 +12,10 @@ Additionally, the `scoreboard_backend` directory contains a
 components that run in AWS lambda.
 
 
-Table of Contents
-=================
-
-   * [Qualifier Scoreboard](#qualifier-scoreboard)
-   * [Table of Contents](#table-of-contents)
-   * [Deployment Prerequisites](#deployment-prerequisites)
-      * [AWS Configuration](#aws-configuration)
-      * [Frontend Dependencies](#frontend-dependencies)
-   * [Frontend Applications](#frontend-applications)
-      * [Countdown](#countdown)
-         * [Development](#development)
-         * [Deployment](#deployment)
-      * [Registration](#registration)
-         * [Development](#development-1)
-         * [Deployment](#deployment-1)
-         * [Production Deployment](#production-deployment)
-      * [Scoreboard](#scoreboard)
-         * [Development](#development-2)
-         * [Deployment](#deployment-2)
-            * [Production Deployment](#production-deployment-1)
-   * [scoreboard_backend](#scoreboard_backend)
-      * [Development](#development-3)
-      * [Setting the challenges](#setting-the-challenges)
-
-# Deployment Prerequisites
+# Development Prerequisites
 
 The following are necessary in order to develop, test, and deploy the
 components that make up the scoreboard.
-
-## AWS Configuration
-
-In order to deploy these applications, you will need a profile named `ooo` in
-your `~/.aws/credentials` file containing your `aws_access_key_id` and
-`aws_secret_access_key`. For more information on setting up this file see:
-https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html
 
 ## Frontend Dependencies
 
@@ -68,7 +37,8 @@ yarn install
 
 ## Backend Dependencies
 
-All the backend applications use serverless https://serverless.com/framework/docs/providers/aws/guide/installation/.
+All the backend applications use serverless
+https://serverless.com/framework/docs/providers/aws/guide/installation/.
 
 Install using
 
@@ -80,24 +50,15 @@ npm install --save-dev serverless-kms-secrets
 
 # Frontend Applications
 
-The frontend applications each build to static html, css, and javascript. The
-deployed code lives in the
-[ooodc2019q-scoreboard](https://s3.console.aws.amazon.com/s3/buckets/ooodc2019q-scoreboard/?region=us-east-1&tab=overview)
-S3 bucket under the `dev` and `prod` prefixes.
+The frontend applications each build to static html, css, and javascript. The deployed code lives
+in an S3 bucket under the `dev` and `prod` prefixes.
 
 Cloudfront distributions are configured to serve files out of that S3 bucket
 mapped to an appropriate prefix.
 
-* (prod) https://scoreboard.oooverflow.io
-* (dev) https://d2b8nk094e89za.cloudfront.net
-
-The S3 bucket is accessible via `Coudfront` through the `access-identity`
+The S3 bucket is accessible via `Cloudfront` through the `access-identity`
 Origin Access Identity:
 https://console.aws.amazon.com/cloudfront/home?region=us-east-1#oai:
-
-The `dev` distribution is protected by HTTP basic authentication using the
-attached `scoreboard-basic-auth` lambda function:
-https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/scoreboard-basic-auth?tab=graph
 
 ## Countdown
 
@@ -115,25 +76,13 @@ cd countdown_frontend
 yarn start
 ```
 
-### Deployment
-
-Deploy to https://scoreboard.oooverflow.io via:
-
-```sh
-cd countdown_frontend
-./deploy.sh
-```
-
 The `index.html` file is set to be cached for 60 seconds so everyone should be
 able to see updates within a minute of deployment.
 
 ## Registration
 
-This application is where team will go to register. By default it deploys to
-https://d2ni0nv313ubc4.cloudfront.net where it is protected by HTTP basic
-authentication (credentials listed in #quals_scoreboard on Slack). This
-application is intended to be deployed to the production environment at the
-start of the competition.
+This application is where team will go to register. This application is intended to be deployed to
+the production environment well before the start of the competition.
 
 ### Development
 
@@ -142,39 +91,10 @@ cd registration_frontend
 yarn start
 ```
 
-### Deployment
-
-Deploy to https://d2ni0nv313ubc4.cloudfront.net via:
-
-```sh
-cd registration_frontend
-./deploy.sh
-```
-
-### Production Deployment
-
-To make an update to the registration page, deploy to
-https://register.oooverflow.io via:
-
-```sh
-cd registration_frontend
-BUILD=prod ./deploy.sh
-```
-
-You will be prompted to confirm that you want to deploy to production.
-
-The `index.html` file is set to be cached for 60 seconds so everyone should be
-able to see updates within a minute of deployment.
-
 ## Scoreboard
 
-![Countdown Screenshot](static/scoreboard.png)
-
-This application is the actual scoreboard that the qualifiers will use. By
-default it deploys to https://d2b8nk094e89za.cloudfront.net where it is
-protected by HTTP basic authentication (credentials listed in #quals_scoreboard
-on Slack). This application is intended to be deployed to the production
-environment at the start of the competition.
+This application is the actual scoreboard that the qualifiers used. This application is intended to
+be deployed to the production environment at the start of the competition.
 
 ### Development
 
@@ -182,31 +102,6 @@ environment at the start of the competition.
 cd scoreboard_frontend
 yarn start
 ```
-
-### Deployment
-
-Deploy to https://d2b8nk094e89za.cloudfront.net via:
-
-```sh
-cd countdown_frontend
-./deploy.sh
-```
-
-#### Production Deployment
-
-To kick off the competition, or make an update during the competition, deploy
-to https://scoreboard.oooverflow.io via:
-
-```sh
-cd countdown_frontend
-BUILD=prod ./deploy.sh
-```
-
-You will be prompted to confirm that you want to deploy to production.
-
-The `index.html` file is set to be cached for 60 seconds so everyone should be
-able to see updates within a minute of deployment.
-
 
 # scoreboard_backend
 
@@ -273,8 +168,7 @@ cd scoreboard_backend
 STAGE=prod ./scripts/reset_password.sh USERNAME PASSWORD
 ```
 
-Note: the password must be at least 10 characters
-
+Note: the password must be at least 10 characters.
 
 
 ## Other Comments
