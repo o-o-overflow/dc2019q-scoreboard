@@ -20,10 +20,8 @@ function Challenge(props) {
 
   let onClick = null;
   let menuClasses = 'menu-item';
-  if (props.authenticated) {
-    onClick = () => props.onClick(props);
-    menuClasses += ' logged-in';
-  }
+  onClick = () => props.onClick(props);
+  menuClasses += ' logged-in';
   if (solved) {
     menuClasses += ' menu-solved';
   }
@@ -51,7 +49,6 @@ function Challenge(props) {
   );
 }
 Challenge.propTypes = {
-  authenticated: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
   points: PropTypes.number.isRequired,
   solveCount: PropTypes.number.isRequired,

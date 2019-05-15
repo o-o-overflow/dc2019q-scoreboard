@@ -336,7 +336,6 @@ class App extends React.Component {
               path="/"
               render={() => (
                 <ChallengeMenu
-                  authenticated={this.state.token !== ''}
                   challenges={this.state.challenges}
                   onClick={this.handleOpenChallengeModal}
                   onUnload={this.handleCloseChallengeModal}
