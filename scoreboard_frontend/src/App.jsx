@@ -4,7 +4,6 @@ import { Link, Route } from 'react-router-dom';
 import ChallengeMenu from './ChallengeMenu';
 import ChallengeModal from './ChallengeModal';
 import GameMatrix from './GameMatrix';
-import LogInModal from './LogInModal';
 import Rules from './Rules';
 import Scoreboard from './Scoreboard';
 import Leaderboard from './Leaderboard';
@@ -32,7 +31,6 @@ class App extends React.Component {
       teamOverallSpeedrunOrder: [],
       showChallengeId: '',
       showChallengeModal: false,
-      showLogInModal: false,
       solvesByTeam: {},
       openedByCategory: {},
       team: window.localStorage.getItem('team') || '',
@@ -53,16 +51,11 @@ class App extends React.Component {
     this.setState({ ...this.state, ...data });
     window.localStorage.setItem('team', data.team);
     window.localStorage.setItem('token', data.token);
-    this.handleCloseLogInModal();
     this.loadData();
   };
 
   handleCloseChallengeModal = () => {
     this.setState({ ...this.state, showChallengeModal: false });
-  };
-
-  handleCloseLogInModal = () => {
-    this.setState({ ...this.state, showLogInModal: false });
   };
 
   handleLogOut = () => {
@@ -82,14 +75,6 @@ class App extends React.Component {
       ...this.state,
       showChallengeId: event.id,
       showChallengeModal: true,
-    });
-  };
-
-  handleOpenLogInModal = () => {
-    this.setState({
-      ...this.state,
-      showLogInModal: true,
-      showChallengeModal: false,
     });
   };
 
@@ -319,15 +304,6 @@ class App extends React.Component {
           Log Out {this.state.team}
         </button>
       );
-    } else {
-      tokenLink = (
-        <button
-          className="lcars-title right lcars-black-bg"
-          onClick={this.handleOpenLogInModal}
-        >
-          Log In
-        </button>
-      );
     }
 
     const teamSolves = this.state.solvesByTeam[this.state.team] || [];
@@ -459,17 +435,6 @@ class App extends React.Component {
               )}
             />
 
-            <ReactModal
-              className="modal"
-              contentLabel="Log In Modal"
-              isOpen={this.state.showLogInModal}
-              onRequestClose={this.handleCloseLogInModal}
-            >
-              <LogInModal
-                onClose={this.handleCloseLogInModal}
-                setAuthentication={this.setAuthentication}
-              />
-            </ReactModal>
             <ReactModal
               className="modal"
               contentLabel="Challenge Modal"
