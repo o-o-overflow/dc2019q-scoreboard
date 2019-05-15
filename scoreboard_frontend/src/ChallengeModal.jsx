@@ -43,8 +43,5 @@ ChallengeModal.propTypes = {
   challengeId: PropTypes.string.isRequired,
   challengeTitle: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
-  onSolve: PropTypes.func.isRequired,
-  solved: PropTypes.bool.isRequired,
-  token: PropTypes.string.isRequired,
 };
 export default ChallengeModal;

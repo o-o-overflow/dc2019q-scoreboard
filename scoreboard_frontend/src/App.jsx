@@ -32,7 +32,6 @@ class App extends React.Component {
       showChallengeModal: false,
       solvesByTeam: {},
       openedByCategory: {},
-      token: '',
       unopened: {},
       currentRace: false,
       races: [],
@@ -107,7 +106,6 @@ class App extends React.Component {
         id,
         points: pointsByChallenge[id],
         solveCount: solvesByChallenge[id] || 0,
-        solved: (solvesByTeam[this.state.team] || []).includes(id),
         open_time: open_time,
         category: category,
         tags,
@@ -265,9 +263,6 @@ class App extends React.Component {
   };
 
   render() {
-    const teamSolves = this.state.solvesByTeam[this.state.team] || [];
-    const solved = teamSolves.includes(this.state.showChallengeId);
-
     return (
       <div className="lcars-app-container lcars-black-bg">
         <div id="header" className="lcars-row header lcars-black-bg">
@@ -384,8 +379,6 @@ class App extends React.Component {
                 }
                 onClose={this.handleCloseChallengeModal}
                 onSolve={this.loadData}
-                solved={solved}
-                token={this.state.token}
               />
             </ReactModal>
           </div>

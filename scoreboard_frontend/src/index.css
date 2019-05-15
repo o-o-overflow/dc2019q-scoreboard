@@ -153,23 +153,6 @@ input {
 	font-size: 125%;
 }
 
-.menu-solved {
-	filter: brightness(50%);
-}
-
-.menu-solved:hover {
-	filter: brightness(50%) !important;
-}
-
-
-.menu-header-solved {
-  color: green;
-}
-
-.menu-header-solved:after {
-  content: ' (completed)';
-}
-
 .menu-points {
 }
 
@@ -323,8 +306,8 @@ table.solves * {
 }
 
 .solves .solved {
-	color: #739F75;
-	font-size: 1.6em;
+    color: #739F75;
+    font-size: 1.6em;
 }
 
 #leaderboard {

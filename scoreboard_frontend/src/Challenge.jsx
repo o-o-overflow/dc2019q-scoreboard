@@ -2,12 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 function Challenge(props) {
-  const { tags, points, solveCount, solved, title } = props;
+  const { tags, points, solveCount, title } = props;
 
   let className = 'menu-header';
-  if (solved) {
-    className += ' menu-header-solved';
-  }
 
   let status;
   if (solveCount > 1) {
@@ -22,9 +19,6 @@ function Challenge(props) {
   let menuClasses = 'menu-item';
   onClick = () => props.onClick(props);
   menuClasses += ' logged-in';
-  if (solved) {
-    menuClasses += ' menu-solved';
-  }
   let point_display = <div className="menu-points">{points} pts</div>;
   if (props.isSpeedrun) {
     point_display = <span />;
@@ -52,7 +46,6 @@ Challenge.propTypes = {
   onClick: PropTypes.func.isRequired,
   points: PropTypes.number.isRequired,
   solveCount: PropTypes.number.isRequired,
-  solved: PropTypes.bool.isRequired,
   tags: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   isSpeedrun: PropTypes.bool.isRequired,
