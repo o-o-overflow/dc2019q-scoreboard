@@ -43,7 +43,7 @@ function Rules() {
       <p>
         We want to see who the fastest hackers are on the planet. So we created
         a new type of challenge: the{' '}
-        <code classname="highlighter-rouge">speedrun</code>. There will be one
+        <code className="highlighter-rouge">speedrun</code>. There will be one
         speedrun challenge released every 2 hours starting at May 11th 03:00 UTC
         for 24 hours (for a total of 12 challenges). Every speedrun challenge is
         running on the latest Ubuntu 18.04 with libc-2.27 md5 hash of
