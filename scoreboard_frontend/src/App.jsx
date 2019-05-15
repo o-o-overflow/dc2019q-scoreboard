@@ -32,8 +32,7 @@ class App extends React.Component {
       showChallengeModal: false,
       solvesByTeam: {},
       openedByCategory: {},
-      team: window.localStorage.getItem('team') || '',
-      token: window.localStorage.getItem('token') || '',
+      token: '',
       unopened: {},
       currentRace: false,
       races: [],
@@ -45,13 +44,6 @@ class App extends React.Component {
   componentDidMount() {
     this.loadData();
   }
-
-  setAuthentication = data => {
-    this.setState({ ...this.state, ...data });
-    window.localStorage.setItem('team', data.team);
-    window.localStorage.setItem('token', data.token);
-    this.loadData();
-  };
 
   handleCloseChallengeModal = () => {
     this.setState({ ...this.state, showChallengeModal: false });
