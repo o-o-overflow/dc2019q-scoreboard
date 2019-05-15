@@ -63,16 +63,8 @@ class App extends React.Component {
         response.json().then(body => ({ body, status: response.status }))
       )
       .then(({ body, status }) => {
-        if (status !== 200) {
-          console.log(status);
-          console.log(body.message);
-          return;
-        }
         this.processData(body.message);
       })
-      .catch(error => {
-        console.log(error);
-      });
   };
 
   processData = data => {
