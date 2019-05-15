@@ -77,12 +77,6 @@ class ChallengeMenu extends React.Component {
 
     return (
       <div>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeNZQFep3eFFIAMm2Riz3H8nwqE-gOeEtbKSwxsOUiWuSlSVg/viewform"
-          className="feedback-link"
-        >
-          The OOO requests your FEEDBACK on the game, please fill out this form
-        </a>
         <h1 className="lcars-row fill">Cadet Training Program</h1>
         <div className="lcars-row fill">
           <div className="lcars-column fill">{leftSections}</div>

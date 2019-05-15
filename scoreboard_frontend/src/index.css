@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:600');
 
-@font-face{ 
+@font-face{
 	font-family: 'Klingon';
 	font-stretch: normal;
 	font-style: normal;
@@ -35,11 +35,6 @@ a {
 a:visited {
 	color: white;
 }
-
-.feedback-link, a.feedback-link:visited {
-	text-decoration: underline;
-}
-
 
 code {
 	font-family: monospace;
