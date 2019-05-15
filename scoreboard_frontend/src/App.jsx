@@ -58,18 +58,6 @@ class App extends React.Component {
     this.setState({ ...this.state, showChallengeModal: false });
   };
 
-  handleLogOut = () => {
-    this.setState({
-      ...this.state,
-      showChallengeModal: false,
-      team: '',
-      token: '',
-    });
-    window.localStorage.removeItem('team');
-    window.localStorage.removeItem('token');
-    this.loadData();
-  };
-
   handleOpenChallengeModal = event => {
     this.setState({
       ...this.state,
@@ -294,25 +282,8 @@ class App extends React.Component {
   };
 
   render() {
-    let tokenLink;
-    if (this.state.token !== '') {
-      tokenLink = (
-        <button
-          className="lcars-title right lcars-black-bg"
-          onClick={this.handleLogOut}
-        >
-          Log Out {this.state.team}
-        </button>
-      );
-    }
-
     const teamSolves = this.state.solvesByTeam[this.state.team] || [];
     const solved = teamSolves.includes(this.state.showChallengeId);
-    const registerLink = this.state.team ? null : (
-      <div className="lcars-title left lcars-black-bg">
-        <a href="https://register.oooverflow.io">Register</a>
-      </div>
-    );
 
     return (
       <div className="lcars-app-container lcars-black-bg">
@@ -325,8 +296,6 @@ class App extends React.Component {
               ☰
             </label>
             <span className="nav-items">
-              {tokenLink}
-              {registerLink}
               <a
                 className="lcars-title right lcars-black-bg"
                 href="https://twitter.com/oooverflow"
@@ -447,7 +416,6 @@ class App extends React.Component {
                   this.challengeTitlesById[this.state.showChallengeId] || ''
                 }
                 onClose={this.handleCloseChallengeModal}
-                onTokenExpired={this.handleLogOut}
                 onSolve={this.loadData}
                 solved={solved}
                 token={this.state.token}

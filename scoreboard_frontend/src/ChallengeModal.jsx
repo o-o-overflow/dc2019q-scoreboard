@@ -85,7 +85,6 @@ class ChallengeModal extends React.Component {
       )
       .then(({ body, status }) => {
         if (status === 401) {
-          this.props.onTokenExpired();
           console.log('Token expired. Please log in again');
           return;
         } else if (status !== 200) {
@@ -126,7 +125,6 @@ class ChallengeModal extends React.Component {
         if (status === 201) {
           this.props.onSolve();
         } else if (status === 401) {
-          this.props.onTokenExpired();
           console.log('Token expired. Please log in again');
           return;
         } else if (status === 429) {
@@ -230,7 +228,6 @@ ChallengeModal.propTypes = {
   challengeTitle: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   onSolve: PropTypes.func.isRequired,
-  onTokenExpired: PropTypes.func.isRequired,
   solved: PropTypes.bool.isRequired,
   token: PropTypes.string.isRequired,
 };
