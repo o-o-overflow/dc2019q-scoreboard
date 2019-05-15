@@ -33,7 +33,7 @@ class Leaderboard extends React.Component {
   raceList() {
     return this.props.races.map(race => {
       return (
-        <Link to={`/leaderboard/${race.id}`}>
+        <Link key={race.id} to={`/leaderboard/${race.id}`}>
           <div className="race-log-element lcars-element button rounded lcars-u-2-2">
             <div className="race-name">{race.id}</div>
             <div className="race-open">

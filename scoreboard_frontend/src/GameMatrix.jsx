@@ -14,7 +14,7 @@ class GameMatrix extends React.Component {
       const isSolved = solves.has(id);
       const theClass = isSolved ? 'solved' : 'not-solved';
       return (
-        <td
+        <td key={id}
           className={theClass}
           dangerouslySetInnerHTML={{
             __html: isSolved ? '&#10004;' : '&#10060;',
