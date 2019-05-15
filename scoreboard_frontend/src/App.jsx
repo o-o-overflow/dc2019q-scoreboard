@@ -7,7 +7,6 @@ import GameMatrix from './GameMatrix';
 import Rules from './Rules';
 import Scoreboard from './Scoreboard';
 import Leaderboard from './Leaderboard';
-import CtfTimeScoreboard from './CtfTimeScoreboard';
 
 ReactModal.setAppElement('#root');
 
@@ -389,21 +388,6 @@ class App extends React.Component {
                 />
               )}
             />
-            <Route
-              exact
-              path="/scoreboard-ctftime"
-              render={() => (
-                <CtfTimeScoreboard
-                  categoryByChallenge={this.categoryByChallenge}
-                  lastSolveTimeByTeam={this.state.lastSolveTimeByTeam}
-                  pointsByTeam={this.state.pointsByTeam}
-                  solvesByTeam={this.state.solvesByTeam}
-                  teamScoreboardOrder={this.state.teamScoreboardOrder}
-                  team={this.state.team}
-                />
-              )}
-            />
-
             <ReactModal
               className="modal"
               contentLabel="Challenge Modal"
